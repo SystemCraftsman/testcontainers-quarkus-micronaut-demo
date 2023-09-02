@@ -9,18 +9,4 @@ import java.util.Map;
 
 // TODO: Implement a test provider for Kafka
 public abstract class AbstractKafkaTest implements TestPropertyProvider {
-
-    static protected final KafkaContainer MY_KAFKA = new KafkaContainer(
-        DockerImageName.parse("confluentinc/cp-kafka:7.5.0")
-    );
-
-    @Override
-    public Map<String, String> getProperties() {
-        if (!MY_KAFKA.isRunning()) {
-            MY_KAFKA.start();
-        }
-        return Collections.singletonMap(
-            "kafka.bootstrap.servers", MY_KAFKA.getBootstrapServers()
-        );
-    }
 }

@@ -13,22 +13,4 @@ import java.util.concurrent.TimeUnit;
 @MicronautTest
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class IotSenderTest extends AbstractKafkaTest {
-
-    @Inject
-    private SignalProducerClient producerClient;
-
-    @Inject
-    public SignalListener signalListener;
-
-    @Test
-    public void testSend() throws InterruptedException {
-        Signal signal = new Signal();
-        signal.setDate(Calendar.getInstance().getTime());
-        signal.setTemperature("35 C");
-        producerClient.sendSignal(signal);
-
-        Signal consumedSignal = SignalKeeper.getSignals().poll(5, TimeUnit.SECONDS);
-        Assertions.assertEquals(signal.toString(), consumedSignal.toString());
-    }
-
 }
