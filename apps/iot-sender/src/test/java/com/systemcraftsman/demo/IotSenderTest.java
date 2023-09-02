@@ -9,9 +9,9 @@ import org.junit.jupiter.api.*;
 import java.util.Calendar;
 import java.util.concurrent.TimeUnit;
 
+// TODO: Implement the test to verify the IoT signal sender works
 @MicronautTest
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class IotSenderTest extends AbstractKafkaTest {
 
     @Inject
@@ -21,7 +21,6 @@ public class IotSenderTest extends AbstractKafkaTest {
     public SignalListener signalListener;
 
     @Test
-    @Order(1)
     public void testSend() throws InterruptedException {
         Signal signal = new Signal();
         signal.setDate(Calendar.getInstance().getTime());

@@ -7,6 +7,7 @@ import org.testcontainers.utility.DockerImageName;
 import java.util.Collections;
 import java.util.Map;
 
+// TODO: Implement a test provider for Kafka
 public abstract class AbstractKafkaTest implements TestPropertyProvider {
 
     static protected final KafkaContainer MY_KAFKA = new KafkaContainer(
