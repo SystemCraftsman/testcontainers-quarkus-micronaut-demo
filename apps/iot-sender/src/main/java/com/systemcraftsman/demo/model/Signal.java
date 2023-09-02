@@ -27,4 +27,12 @@ public class Signal implements Serializable {
     public void setTemperature(String temperature) {
         this.temperature = temperature;
     }
+
+    @Override
+    public String toString() {
+        return "Signal{" +
+                "date=" + date +
+                ", temperature='" + temperature + '\'' +
+                '}';
+    }
 }

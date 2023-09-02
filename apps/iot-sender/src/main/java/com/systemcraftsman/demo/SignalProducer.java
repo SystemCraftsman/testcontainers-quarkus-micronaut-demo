@@ -5,10 +5,11 @@ import com.systemcraftsman.demo.model.Signal;
 import io.micronaut.context.annotation.Context;
 import jakarta.annotation.PostConstruct;
 import jakarta.inject.Inject;
+import jakarta.inject.Singleton;
 
 import java.util.concurrent.TimeUnit;
 
-@Context
+@Singleton
 public class SignalProducer {
 
     @Inject

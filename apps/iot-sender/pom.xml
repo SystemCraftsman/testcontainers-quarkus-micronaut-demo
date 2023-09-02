@@ -77,13 +77,8 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter-api</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter-engine</artifactId>
+      <groupId>io.micronaut.testresources</groupId>
+      <artifactId>micronaut-test-resources-kafka</artifactId>
       <scope>test</scope>
     </dependency>
   </dependencies>
