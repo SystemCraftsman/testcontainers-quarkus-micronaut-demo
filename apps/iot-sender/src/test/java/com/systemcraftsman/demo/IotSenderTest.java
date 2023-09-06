@@ -17,9 +17,6 @@ public class IotSenderTest extends AbstractKafkaTest {
     @Inject
     private SignalProducerClient producerClient;
 
-    @Inject
-    public SignalListener signalListener;
-
     @Test
     public void testSend() throws InterruptedException {
         Signal signal = new Signal();
